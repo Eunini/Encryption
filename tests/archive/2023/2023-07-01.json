@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "scenario_date": "2023-07-01",
+  "generated_at": "2026-10-27T23:56:17.229411+00:00",
+  "synthetic": true,
+  "plaintext_hex": "5075626c696320636f6d7061746962696c697479206669787475726520666f7220323032332d30372d30312e20e1bab8206bc3a1c3a0c3a172e1bb8dcc802e0aa8a65bba2f5b0bb6f0a2df96d811aadd86ecfe7aa4157c392ece73cd6e5bd40f",
+  "expected_filename": "public-2023-07-01.bin",
+  "envelope": {
+    "cipher": {
+      "bits": 256,
+      "iv": "S0YJfiaGWoY0dbJu",
+      "name": "AES-GCM",
+      "tagLength": 128
+    },
+    "ciphertext": "7Rmq31XfdRkQRaWH8wm1CUWk8qE6P4KsCUCohzn3pJPyztQpCUsBwCXtgcPRfHSPDBmtx9k0KRoSIiuSxqB1/fsEJV6FZ8kdpZ0uIEabCr9gLB5SjdT/1oUlq8OFacizNwixPJcxO7VMXw0j4+NaghAI4pd1v+9icNKW0nvBEdg/pbE7k59PTJg+5BaxGrUmL5ml8xNka8k=",
+    "format": "encryption-workbench",
+    "kdf": {
+      "hash": "SHA-256",
+      "iterations": 600000,
+      "name": "PBKDF2",
+      "salt": "9IMAyp9SIME/cIM5RIANKQ=="
+    },
+    "version": 1
+  }
+}
