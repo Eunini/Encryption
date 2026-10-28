@@ -16,3 +16,31 @@ jobs:
       - run: uv run ruff format --check src tests scripts
       - run: uv run pytest
       - run: uv build
+  web:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: '3.12'
+      - run: uv sync --frozen
+      - run: npm ci --prefix web --ignore-scripts
+      - run: npm test --prefix web
+      - run: npm run build
+      - run: npm audit --prefix web --audit-level=high
+      - run: npx playwright install --with-deps chromium
+        working-directory: web
+      - name: Test the production build
+        working-directory: web
+        run: |
+          npm run preview > /tmp/encryption-preview.log 2>&1 &
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:4342/ > /dev/null; then break; fi
+            sleep 1
+          done
+          DEMO_URL=http://127.0.0.1:4342 npm run test:browser

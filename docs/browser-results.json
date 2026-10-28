@@ -1,0 +1,436 @@
+{
+  "config": {
+    "configFile": "/home/kamicode/aps/alma/output/2023-repo-upgrades/Encryption/web/playwright.config.mjs",
+    "rootDir": "/home/kamicode/aps/alma/output/2023-repo-upgrades/Encryption/web/tests/browser",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/kamicode/aps/alma/output/2023-repo-upgrades/Encryption/web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "/home/kamicode/aps/alma/output/2023-repo-upgrades/Encryption/web/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/kamicode/aps/alma/output/2023-repo-upgrades/Encryption/web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "/home/kamicode/aps/alma/output/2023-repo-upgrades/Encryption/web/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../docs/browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "runAgents": "none",
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.58.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "workspace.spec.mjs",
+      "file": "workspace.spec.mjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "text encryption and authenticated decryption stay local and clear completely",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6203,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-28T00:27:21.853Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8a29e3668c8a26b42dbd-b11e544a078d600c6740",
+          "file": "workspace.spec.mjs",
+          "line": 21,
+          "column": 1
+        },
+        {
+          "title": "browser decrypts a Python-created binary file and emits a CLI-compatible encrypted download",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5623,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-28T00:27:28.611Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8a29e3668c8a26b42dbd-233fe3541cc22c040795",
+          "file": "workspace.spec.mjs",
+          "line": 82,
+          "column": 1
+        },
+        {
+          "title": "wrong passwords and malformed containers release no output; inspection stays unauthenticated",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3190,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-28T00:27:34.271Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8a29e3668c8a26b42dbd-5f8e2cd902402a7e8b00",
+          "file": "workspace.spec.mjs",
+          "line": 152,
+          "column": 1
+        },
+        {
+          "title": "cancellation, confirmation checks, themes and keyboard access work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2993,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-28T00:27:37.499Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8a29e3668c8a26b42dbd-f4cc18ddcb7a9a9f5886",
+          "file": "workspace.spec.mjs",
+          "line": 193,
+          "column": 1
+        },
+        {
+          "title": "both themes, each action and narrow screens pass accessibility checks",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13250,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-28T00:27:40.527Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8a29e3668c8a26b42dbd-868bb52879af0d94ae3e",
+          "file": "workspace.spec.mjs",
+          "line": 229,
+          "column": 1
+        },
+        {
+          "title": "text encryption and authenticated decryption stay local and clear completely",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6558,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-28T00:27:57.129Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8a29e3668c8a26b42dbd-3ea2fde732ff007e402d",
+          "file": "workspace.spec.mjs",
+          "line": 21,
+          "column": 1
+        },
+        {
+          "title": "browser decrypts a Python-created binary file and emits a CLI-compatible encrypted download",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5742,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-28T00:28:04.094Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8a29e3668c8a26b42dbd-6987071d837b4085666e",
+          "file": "workspace.spec.mjs",
+          "line": 82,
+          "column": 1
+        },
+        {
+          "title": "wrong passwords and malformed containers release no output; inspection stays unauthenticated",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3565,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-28T00:28:09.867Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8a29e3668c8a26b42dbd-8b2ccd4eee66044569e2",
+          "file": "workspace.spec.mjs",
+          "line": 152,
+          "column": 1
+        },
+        {
+          "title": "cancellation, confirmation checks, themes and keyboard access work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4312,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-28T00:28:13.468Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8a29e3668c8a26b42dbd-efc4e05d8dff6a5644f8",
+          "file": "workspace.spec.mjs",
+          "line": 193,
+          "column": 1
+        },
+        {
+          "title": "both themes, each action and narrow screens pass accessibility checks",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14701,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-28T00:28:17.838Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8a29e3668c8a26b42dbd-de1a676884be8c0a3217",
+          "file": "workspace.spec.mjs",
+          "line": 229,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-28T00:27:18.149Z",
+    "duration": 74816.687,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

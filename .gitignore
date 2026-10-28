@@ -4,3 +4,7 @@ __pycache__/
 .ruff_cache/
 dist/
 *.egg-info/
+node_modules/
+.vercel/
+web/test-results/
+web/playwright-report/

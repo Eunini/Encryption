@@ -36,3 +36,20 @@ An inspection result is unauthenticated. Authentication failure returns no
 plaintext or filename. There is no recovery key, remote service, telemetry,
 user account or network dependency in the encryption/verification operations.
 The implementation has not been independently audited or certified as FIPS compliant.
+
+## Browser implementation
+
+The web app delegates cryptography to Web Crypto and derives non-extractable
+AES-GCM keys in a dedicated worker. It enforces a 16 MiB plaintext limit and the
+same fixed algorithms, work factor, canonical authenticated header and encrypted
+metadata as the CLI. Its bounded JSON reader rejects duplicate keys, decimal or
+unsafe integer fields, excessive nesting and unsupported structures before key
+derivation. Cross-runtime tests include Unicode metadata and arbitrary binary bytes.
+
+The app has no upload endpoint, telemetry integration, remote scripts, key service
+or account storage. Browser tests inspect network requests during actual operations.
+Only a theme preference is kept in localStorage. Passphrases, plaintext and results
+remain in page/worker memory until cleared or the page closes. Clearing terminates
+the worker and drops app references; browser/OS memory erasure is not guaranteed.
+Downloads are created only after the user requests them, and recovered filenames
+are sanitized before being used as download suggestions.

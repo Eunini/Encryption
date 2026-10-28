@@ -8,6 +8,40 @@ is atomic and never overwrites an existing file or symlink.
 This is an independent recreation of `Eunini/Encryption`. The previous repository
 was unavailable; its original code and commit history have not been recovered.
 
+## Browser workspace
+
+The browser app under `web/` encrypts text and files, authenticates and decrypts
+containers, and inspects public headers. Web Crypto runs in a worker. Inputs and
+passphrases are never uploaded or saved by the app; only a theme preference is
+stored. Clear workspace stops the worker and releases input/output references.
+
+The browser and Python CLI share the same version-one container. Cross-runtime
+tests verify Python-created files in the browser and browser-created files in
+Python, including binary bytes and Unicode filename metadata. The browser limit
+is 16 MiB; the CLI limit is 64 MiB. Both use fresh salts/nonces for actual encryption.
+
+```bash
+npm ci --prefix web --ignore-scripts
+npm run dev
+```
+
+Open `http://localhost:4341`. `npm run build` produces `web/dist/`. The checked-in
+`vercel.json` selects Vite, Node 24 via `package.json`, and the matching install,
+build and output paths. No server functions or encryption keys are deployed.
+
+To check the browser implementation:
+
+```bash
+npm test --prefix web
+cd web
+npx playwright install chromium
+npm run test:browser
+```
+
+The Python environment must be installed for cross-runtime tests. Browser tests
+cover text/file downloads, authentication failures, malformed containers, clearing,
+cancellation, both themes, mobile layouts, accessibility and absence of data uploads.
+
 ## Use
 
 Requires Python 3.12+ and [uv](https://docs.astral.sh/uv/).
