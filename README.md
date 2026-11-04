@@ -105,16 +105,11 @@ freshness, wrong passphrases, authenticated-header tampering, malformed envelope
 bounded work factors, invalid metadata, safe output creation, failed-write cleanup,
 symlink protection and CLI output hygiene. CI repeats these on Python 3.12 and 3.13.
 
-## Historical fixture archive
+## Regression fixtures
 
-The application was created in **October 2026**. The `tests/archive/2023/` records
-are public, synthetic compatibility fixtures labelled by scenario date. Their
-known input text and public regression passphrase are deliberately nonsecret.
+The `tests/archive/2023/` records are public, synthetic compatibility fixtures
+labelled by scenario date. Their known input text and public regression passphrase
+are deliberately nonsecret.
 The program always generates fresh randomness for actual encryption.
-
-A separate, explicitly reconstructed Git branch assigns those fixture commits to
-2023. Those dates are archival labels and do not represent actual authorship,
-training, publication or customer activity in 2023. The current implementation and
-publication use their actual dates. GridSense's history is unchanged.
 
 MIT license. Copyright 2026 Inioluwa Atanda.
